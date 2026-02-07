@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <string>
 
-namespace auth
+namespace g_auth
 {
     class c_auth
     {
@@ -12,4 +12,4 @@ namespace auth
     };
 };
 
-inline auth::c_auth* SmokeAuth = new auth::c_auth();
+inline g_auth::c_auth* auth = new g_auth::c_auth();
