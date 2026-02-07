@@ -9,7 +9,7 @@ static std::string app_id = ""; // your application id here
 
 int main()
 {
-    if (!SmokeAuth->initialize(app_id)) 
+    if (!auth->initialize(app_id))
     {
         MessageBoxA
         (
@@ -21,10 +21,9 @@ int main()
         );
         return 1;
     };
-    SmokeAuth->input();
+    auth->input();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cout << "WOW, VALID KEY!" << std::endl; 
-    // now do whatever you want
+    std::cout << "[+] Authenticated" << std::endl;
     std::cin.get();
     return 0;
 };
